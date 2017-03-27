@@ -1,0 +1,14 @@
+{
+  "name": "personal-blog-site",
+  "version": "1.0.0",
+  "description": "A complete architecture of large scale applicaion and website blog",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Md. Shohel Rana",
+  "license": "MIT",
+  "dependencies": {
+    "angular-animate": "^1.6.3"
+  }
+}
