@@ -18,4 +18,4 @@ bower install
 ```
 
 ## Author
-**MD. SHOHEL RANA(https://github.com/mdshohelrana/aboutme)**
+**[MD. SHOHEL RANA](https://github.com/mdshohelrana/aboutme)**
