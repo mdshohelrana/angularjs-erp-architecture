@@ -15,6 +15,7 @@ git clone https://github.com/mdshohelrana/AngularJSArchitecture.git
 cd AngularJSArchitecture
 npm install
 bower install
+npm start
 ```
 
 ## Author
