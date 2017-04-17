@@ -24,10 +24,11 @@ require.config({
 
         //library for angular
         angular: 'assets/libs/angular/angular.min',
-        ngSanitize: 'assets/libs/angular-sanitize/angular-sanitize.min',        
+        ngSanitize: 'assets/libs/angular-sanitize/angular-sanitize.min',
         ngAnimate: 'assets/libs/angular-animate/angular-animate.min',
         restangular: 'assets/libs/restangular/dist/restangular.min',
-        uiRouter: 'assets/libs/angular-ui-router/release/angular-ui-router.min',       
+        satellizer: 'assets/libs/satellizer/dist/satellizer.min',
+        uiRouter: 'assets/libs/angular-ui-router/release/angular-ui-router.min',
         oclazyload: 'assets/libs/oclazyload/dist/ocLazyLoad.require.min',
         //angularTranslate: 'assets/libs/angular-translate/angular-translate.min',
         //ngStorage: 'assets/libs/ngstorage/ngStorage.min',
@@ -56,6 +57,9 @@ require.config({
         },
         restangular: {
             deps: ['angular', 'lodash']
+        },
+        satellizer: {
+            deps: ['angular']
         },
         uiRouter: {
             deps: ['angular']

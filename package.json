@@ -1,14 +1,18 @@
 {
-  "name": "personal-blog-site",
-  "version": "1.0.0",
-  "description": "A complete architecture of large scale applicaion and website blog",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Md. Shohel Rana",
-  "license": "MIT",
-  "dependencies": {
-    "angular-animate": "^1.6.3"
-  }
+    "name": "personal-blog-site",
+    "version": "1.0.0",
+    "description": "A complete architecture of large scale applicaion and website blog",
+    "main": "main.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "Md. Shohel Rana",
+    "license": "MIT",
+    "dependencies": {
+        "express": "4.15.2",
+        "body-parser": "1.17.1"
+    },
+    "devDependencies": {
+        "opn": "^4.0.2"
+    }
 }

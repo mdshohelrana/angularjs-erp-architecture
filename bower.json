@@ -29,6 +29,7 @@
     "angular-translate": "^2.15.1",
     "angular-animate": "^1.6.3",
     "angular-sanitize": "^1.6.3",
-    "restangular": "^1.6.1"
+    "restangular": "^1.6.1",
+    "satellizer": "^0.15.5"
   }
 }

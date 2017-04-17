@@ -30,7 +30,7 @@ define([
 
             //admin            
             , 'app/admin/admin.config'
-            , 'app/admin/admin.config.exceptionHandler'
+            , 'app/admin/admin.config.lazyload'
             , 'app/admin/admin.routes'
 
             //blog
