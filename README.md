@@ -18,5 +18,8 @@ bower install
 npm start
 ```
 
+## Optimization
+Open the command-line and navigate to the _build folder and Type '''build.bat''' and press Enter. 
+
 ## Author
 **[MD. SHOHEL RANA](https://github.com/mdshohelrana/aboutme)**

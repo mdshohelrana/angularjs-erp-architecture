@@ -1,0 +1,15 @@
+{
+    "baseUrl": "../",
+    "name": "main",
+    "include": [
+        //"assets/js/plugin/require"
+    ],
+    "exclude": [],
+    "optimize": "uglify2",
+    "out": "../main-built.js",
+    "insertRequire": [
+        "main"
+    ]
+}
+
+//https://github.com/requirejs/r.js/blob/master/build/example.build.js
