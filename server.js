@@ -4,6 +4,9 @@ var express     = require('express'),
     fs          = require('fs'),
     app         = express();
 
+// sets port 3000 to default or unless otherwise specified in the environment
+app.set('port', process.env.PORT || 3000);
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -19,7 +22,9 @@ app.all('/*', function(req, res) {
     res.sendFile(__dirname + '/src/index.html');
 });
 
-app.listen(3000);
+app.listen(3000, '0.0.0.0', function() {
+    console.log('Listening to port:  ' + 3000);
+});
 
 console.log('Express listening on port 3000.');
 
