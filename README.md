@@ -19,7 +19,7 @@ npm start
 ```
 
 ## Optimization
-Open the command-line and navigate to the _build folder and Type '''build.bat''' and press Enter. 
+Open the command-line and navigate to the _build folder and Type ```build.bat``` and press Enter. 
 
 ## Demo
 [Demo](https://angularjsarchitecture.herokuapp.com)
