@@ -32,7 +32,7 @@ define(['angular'], function (ng) {
                     url: '/home',
                     templateUrl: 'app/blog/views/home.html' + htmlVersion,
                     controller: 'homeCtrl',
-                    resolve: load(['app/blog/controller/homeCtrl.js']),
+                    resolve: load(['app/blog/controller/homeCtrl.js', 'app/blog/services/homeSvc.js']),
                     data: {
                         title: 'all blog views'
                     }

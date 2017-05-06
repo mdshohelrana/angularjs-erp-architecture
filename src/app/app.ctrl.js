@@ -4,12 +4,12 @@ define(['angular'], function (ng) {
 
     //get module definations
     var module = ng.module(APP_MODULES.APP.name);
-   
+
     // Inject the dependencies. 
     // Point to the controller definition function.
     var controllerId = 'appCtrl';
     module.controller(controllerId, appCtrl);
-    
+
     //appCtrl.$inject = ['$scope', '$translate', '$localStorage', '$window'];
     appCtrl.$inject = ['$scope', '$window'];
 
@@ -25,9 +25,9 @@ define(['angular'], function (ng) {
 
         // config
         vm.app = {
-            name: 'personal-blog-site',
+            name: 'MyBlog',
             version: '1.0.0',
-
+            copyRight: new Date().getFullYear(),
             // for chart colors
             color: {
                 primary: '#7266ba',
