@@ -1,7 +1,7 @@
 {
-    "name": "personal-blog-site",
+    "name": "angularjs-architecture",
     "version": "1.0.0",
-    "description": "A complete architecture of large scale applicaion and website blog",
+    "description": "A complete architecture of large scale applicaion",
     "main": "main.js",
     "scripts": {
         "start": "node server.js"

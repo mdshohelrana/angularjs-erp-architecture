@@ -4,14 +4,15 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceRoot}"
+            "name": "Launch index.html with sourcemaps",
+            "url": "http://localhost:3000/index.html",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/src"
         },
         {
             "type": "chrome",
             "request": "attach",
-            "name": "Attach to Chrome",
+            "name": "Angularjs Architecture Attach to Chrome",
             "port": 9222,
             "webRoot": "${workspaceRoot}"
         }
