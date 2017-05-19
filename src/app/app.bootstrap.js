@@ -38,6 +38,11 @@ define([
             , 'app/blog/blog.config.lazyload'
             , 'app/blog/blog.routes'
 
+             //restaurant
+            , 'app/restaurant/restaurant.config'
+            , 'app/restaurant/restaurant.config.lazyload'
+            , 'app/restaurant/restaurant.routes'
+
         ], function (domReady) {
 
             //after document ready

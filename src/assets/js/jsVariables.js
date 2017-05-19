@@ -7,7 +7,8 @@ var APP_MODULES = {
     COMMON: { name: 'COMMON', code: 2 },
     AUTH: { name: 'AUTH', code: 3 },
     ADMIN: { name: 'ADMIN', code: 4 },
-    BLOG: { name: 'BLOG', code: 5 }    
+    BLOG: { name: 'BLOG', code: 5 },
+    RES: { name: 'RES', code: 6 }
 };
 
 //for development

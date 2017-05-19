@@ -1,0 +1,2 @@
+F:\Work\Opensource\Github\angularjs\AngularJSArchitecture\AngularJSArchitecture\obj\Debug\AngularJSArchitecture.njsprojResolveAssemblyReference.cache
+F:\Work\Opensource\Github\angularjs\AngularJSArchitecture\AngularJSArchitecture\bin\Microsoft.NodejsTools.WebRole.dll

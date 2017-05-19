@@ -1,18 +1,19 @@
 {
-    "name": "angularjs-architecture",
-    "version": "1.0.0",
-    "description": "A complete architecture of large scale applicaion",
-    "main": "main.js",
-    "scripts": {
-        "start": "node server.js"
-    },
-    "author": "Md. Shohel Rana",
-    "license": "MIT",
-    "dependencies": {
-        "express": "4.15.2",
-        "body-parser": "1.17.1"
-    },
-    "devDependencies": {
-        "opn": "^4.0.2"
-    }
+  "name": "personal-blog-site",
+  "version": "1.0.0",
+  "description": "A complete architecture of large scale applicaion and website blog",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Md. Shohel Rana",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.15.2",
+    "body-parser": "1.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "opn": "^4.0.2"
+  }
 }

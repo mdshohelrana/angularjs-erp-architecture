@@ -9,7 +9,7 @@ define(['angular'], function (ng) {
     // Point to the controller definition function.
     var controllerId = 'splashCtrl';
     module.controller(controllerId, splashCtrl);
-    
+
     splashCtrl.$inject = ['$scope', '$timeout', '$state'];
 
     function splashCtrl($scope, $timeout, $state) {
@@ -27,6 +27,7 @@ define(['angular'], function (ng) {
         //go to blog site
         function gotoBlog() {
             $state.go('blog.home');
+            //$state.go('restaurant.visitor');
         }
     }
 });

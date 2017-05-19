@@ -17,7 +17,8 @@ define(['angular'], function (ng) {
           var layout = "app/_common/layout/app.html";
 
           $urlMatcherFactoryProvider.caseInsensitive(true);
-          $urlRouterProvider.otherwise('/app/splash');
+          $urlRouterProvider.otherwise('/restaurant/visitor');
+          //$urlRouterProvider.otherwise('/app/splash');
           //$urlRouterProvider.otherwise('/auth/register');
           //$urlRouterProvider.otherwise('/admin/firstpage');
           //$urlRouterProvider.otherwise('/blog/firstpage');
