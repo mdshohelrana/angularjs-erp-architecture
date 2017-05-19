@@ -4,3 +4,5 @@
 node_modules/
 npm-debug.log
 src\assets\libs\
+obj/
+.ntvs_analysis.dat/
