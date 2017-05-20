@@ -1,0 +1,154 @@
+
+
+/* ==========================================================================
+   Splash Screen
+   ========================================================================== */
+.splash img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    /* ie8 */
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.splash h1 {
+    font: bold 2.5em 'Oswald', sans-serif;
+}
+
+.splash {
+    background: url('../img/splash/splash-bg.jpg') center center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 360px;
+    z-index: 999;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.splash-title {
+    color: white;
+    font-size: 3em;
+    margin-top: 100px;
+    text-shadow: 0 2px 10px #000;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+a.splash-arrow {
+    color: white;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    margin-left: -25px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    border: 3px solid white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+    a.splash-arrow:hover {
+        text-decoration: none;
+        bottom: 50px;
+    }
+
+@media all and (max-width: 690px) {
+    .splash-title {
+        font-size: 2em;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .splash-title {
+        font-size: 1.5em;
+    }
+}
+
+
+/* ==========================================================================
+   Blog
+   ========================================================================== */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+    margin: 50px 0;
+}
+
+
+/* ==========================================================================
+   Restaurant
+   ========================================================================== */
+.search-heading img {
+    max-height: 50px;
+}
+
+#map {
+    height: 400px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid silver;
+}

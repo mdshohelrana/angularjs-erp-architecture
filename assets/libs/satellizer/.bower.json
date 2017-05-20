@@ -1,0 +1,32 @@
+{
+  "name": "satellizer",
+  "main": "dist/satellizer.js",
+  "homepage": "https://github.com/sahat/satellizer",
+  "ignore": [
+    "examples",
+    "src",
+    "test",
+    "typings",
+    ".gitignore",
+    ".npmignore",
+    "karma.conf.js",
+    "rollup.config.js",
+    "tsconfig.json",
+    "tslint.json",
+    "typings.json"
+  ],
+  "dependencies": {
+    "angular": "1.3.0 - 1.5.x"
+  },
+  "version": "0.15.5",
+  "_release": "0.15.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.15.5",
+    "commit": "99a2603cadc1879dd577c0a19cf6c3fa9c92ac51"
+  },
+  "_source": "https://github.com/sahat/satellizer.git",
+  "_target": "^0.15.5",
+  "_originalSource": "satellizer",
+  "_direct": true
+}

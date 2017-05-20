@@ -1,0 +1,73 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="search-heading clearfix">
+                <img class="pull-left" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/695px-AngularJS_logo.svg.png" />
+                <img class="pull-right" src="http://upload.wikimedia.org/wikipedia/commons/9/9a/Google_maps_logo.png" />
+            </h3>
+
+            <div ng-show="searchResult.state == 'noResult'" class="noResults">No results found</div>
+
+            <div class="alert alert-info text-center" role="alert" data-ng-show="searchResult.state == 'noResult'">
+                No results found
+            </div>
+
+            <form name="searchForm" novalidate ng-submit="search()">
+                <div class="input-group">
+                    <input name="place" type="text" class="form-control" ng-model="searchResult.searchPlace" required autofocus />
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" ng-disabled="searchForm.$invalid">
+                            Search
+                        </button>
+                    </span>
+                </div>
+            </form>
+
+            <div id="map"></div>
+
+            <ul class="list-group">
+                <li class="list-group-item" data-ng-repeat="venue in venues">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img class="shop" width="100" data-ng-src="{{venue.picture_url}}" />
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="shopTitle">{{venue.title}}</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <span data-ng-repeat="el in venue.plus">
+                                        <img src="assets/img/star_gold.png" height="15" alt="" />
+                                    </span>
+                                    <span ng-repeat="el in venue.minus">
+                                        <img src="assets/img/star_grey.png" height="15" alt="" />
+                                    </span>
+                                    <!--<span class="bg-info">
+                                        {{venue.reviews}}
+                                    </span>-->
+                                    <!--<span class="bg-info">
+                                        {{venue.price}}
+                                    </span>-->
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="bg-info">
+                                        {{venue.place}}
+                                    </div>
+                                </div>
+                                <!--<div class="col-md-12">
+                                    <div class="bg-info">
+                                        {{venue.category}}
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <img class="chevron" src="assets/img/chevron.png" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
