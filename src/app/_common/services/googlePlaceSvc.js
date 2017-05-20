@@ -27,7 +27,7 @@ define(['angular'], function (ng) {
             try {
                 var self = this;
                 var options = {
-                    center: new google.maps.LatLng(40.7127837, -74.00594130000002),
+                    center: new google.maps.LatLng(23.810332, 90.41251809999994),
                     zoom: 13,
                     disableDefaultUI: true
                 }
