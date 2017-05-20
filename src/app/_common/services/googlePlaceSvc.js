@@ -18,7 +18,19 @@ define(['angular'], function (ng) {
         var service = {
             init: init,
             search: search,
-            addMarker: addMarker
+            createMarker: createMarker,
+            latLng: { lat: 23.810332, lng: 90.41251809999994 },
+            request: {
+                radius: '500',
+                opennow: true,
+                minprice: 0,
+                maxprice: 4,
+                rankby: 'distance',
+                types: ['restaurant']
+            },
+            map: void (0),
+            places: void (0),
+            markers: void (0)
         };
         return service;
 
@@ -26,15 +38,34 @@ define(['angular'], function (ng) {
         function init() {
             try {
                 var self = this;
-                var options = {
-                    center: new google.maps.LatLng(23.810332, 90.41251809999994),
-                    zoom: 13,
-                    disableDefaultUI: true
+                var d = $q.defer();
+
+                //get the current positions
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+
+                        self.latLng.lat = position.coords.latitude;
+                        self.latLng.lng = position.coords.longitude;
+
+                        //options                
+                        var options = {
+                            center: self.latLng,
+                            zoom: 15
+                        };
+                        self.request.location = self.latLng;
+                        self.map = new google.maps.Map(document.getElementById("map"), options);
+                        self.places = new google.maps.places.PlacesService(self.map);
+
+                        self.places.nearbySearch(self.request, function (results, status) {
+                            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                                d.resolve(results);
+                            } else d.reject(status);
+                        });
+                    }, function (e) {
+                        d.reject(e)
+                    });
                 }
-                self.map = new google.maps.Map(
-                    document.getElementById("map"), options
-                );
-                self.places = new google.maps.places.PlacesService(this.map);
+                return d.promise;
             }
             catch (e) {
                 throw e;
@@ -45,10 +76,12 @@ define(['angular'], function (ng) {
         function search(str) {
             try {
                 var self = this;
+                self.request.query = str;
+
                 var d = $q.defer();
-                self.places.textSearch({ query: str }, function (results, status) {
+                self.places.textSearch(self.request, function (results, status) {
                     if (status == 'OK') {
-                        d.resolve(results[0]);
+                        d.resolve(results);
                     }
                     else d.reject(status);
                 });
@@ -58,20 +91,55 @@ define(['angular'], function (ng) {
             }
         }
 
-        //add marker
-        function addMarker(res) {
-            try {
-                var self = this;
-                if (self.marker) self.marker.setMap(null);
-                this.marker = new google.maps.Marker({
+        function createMarker(results) {
+            var self = this;
+
+            //clear the marker
+            deleteMarkers(self);
+
+            for (var i = 0; i < results.length; i++) {
+                var place = results[i];
+                var placeLoc = place.geometry.location;
+
+                // Adds a marker to the map and push to the array.
+                var marker = new google.maps.Marker({
                     map: self.map,
-                    position: res.geometry.location,
-                    animation: google.maps.Animation.DROP
+                    position: place.geometry.location,
+                    //icon: {
+                    //    //url: 'http://maps.gstatic.com/mapfiles/circle.png',
+                    //    anchor: new google.maps.Point(16, 16),
+                    //    scaledSize: new google.maps.Size(20, 32)
+                    //}
                 });
-                self.map.setCenter(res.geometry.location);
-            } catch (e) {
-                throw e;
+                self.markers.push(marker);
             }
+
+            //show markers
+            showMarkers(self);
+        }
+
+        // Removes the markers from the map, but keeps them in the array.
+        function clearMarkers(self) {
+            setMapOnAll(self, null);
+        }
+
+        // Sets the map on all markers in the array.
+        function setMapOnAll(self, map) {
+            if (!self.markers) return;
+            for (var i = 0; i < self.markers.length; i++) {
+                self.markers[i].setMap(map);
+            }
+        }
+
+        // Shows any markers currently in the array.
+        function showMarkers(self) {
+            setMapOnAll(self, self.map);
+        }
+
+        // Deletes all markers in the array by removing references to them.
+        function deleteMarkers(self) {
+            clearMarkers(self);
+            self.markers = [];
         }
     }
 });

@@ -1,7 +1,7 @@
 'use strict';
 
 define([
-    'angular', 'ngSanitize', 'ngAnimate', 'restangular', 'satellizer', 'uiRouter', 'oclazyload'
+    'angular', 'ngSanitize', 'ngAnimate', 'restangular', 'satellizer', 'uiRouter', 'oclazyload', 'linqjs'
     //, 'angularTranslate'
     //, 'ngStorage'
 

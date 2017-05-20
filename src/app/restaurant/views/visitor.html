@@ -14,7 +14,7 @@
 
             <form name="searchForm" novalidate ng-submit="search()">
                 <div class="input-group">
-                    <input name="place" type="text" class="form-control" ng-model="searchResult.searchPlace" autofocus />
+                    <input name="place" type="text" class="form-control" ng-model="searchResult.searchPlace" required autofocus />
                     <span class="input-group-btn">
                         <button class="btn btn-primary" ng-disabled="searchForm.$invalid">
                             Search
@@ -29,7 +29,7 @@
                 <li class="list-group-item" data-ng-repeat="venue in venues">
                     <div class="row">
                         <div class="col-md-5">
-                            <img class="shop" data-ng-src="{{venue.picture_url}}" />
+                            <img class="shop" width="100" data-ng-src="{{venue.picture_url}}" />
                         </div>
                         <div class="col-md-5">
                             <div class="row">
@@ -37,29 +37,29 @@
                                     <div class="shopTitle">{{venue.title}}</div>
                                 </div>
                                 <div class="col-md-12">
-                                    <span ng-repeat="el in venue.plus">
+                                    <span data-ng-repeat="el in venue.plus">
                                         <img src="assets/img/star_gold.png" height="15" alt="" />
                                     </span>
                                     <span ng-repeat="el in venue.minus">
-                                        <img src="assets/img/star_gold.png" height="15" alt="" />
+                                        <img src="assets/img/star_grey.png" height="15" alt="" />
                                     </span>
-                                    <span class="bg-info">
+                                    <!--<span class="bg-info">
                                         {{venue.reviews}}
-                                    </span>
-                                    <span class="bg-info">
+                                    </span>-->
+                                    <!--<span class="bg-info">
                                         {{venue.price}}
-                                    </span>
+                                    </span>-->
                                 </div>
                                 <div class="col-md-12">
                                     <div class="bg-info">
                                         {{venue.place}}
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <!--<div class="col-md-12">
                                     <div class="bg-info">
                                         {{venue.category}}
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <div class="col-md-2">
