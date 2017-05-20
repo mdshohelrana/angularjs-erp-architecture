@@ -16,7 +16,7 @@ define(['angular'], function (ng) {
 
         //rename $scope
         var vm = $scope;
-        vm.message = 'PERSONAL BLOG SITE';
+        vm.message = 'My Restaurant';
         vm.gotoBlog = gotoBlog;
 
         //go to main page after sometimes
@@ -26,8 +26,8 @@ define(['angular'], function (ng) {
 
         //go to blog site
         function gotoBlog() {
-            $state.go('blog.home');
-            //$state.go('restaurant.visitor');
+            //$state.go('blog.home');
+            $state.go('restaurant.visitor');
         }
     }
 });

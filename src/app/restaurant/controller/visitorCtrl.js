@@ -10,24 +10,37 @@ define(['angular'], function (ng) {
     var controllerId = 'visitorCtrl';
     module.controller(controllerId, visitorCtrl);
 
-    visitorCtrl.$inject = ['$scope', '$timeout', 'visitorSvc'];
+    visitorCtrl.$inject = ['$scope', '$timeout', 'visitorSvc', 'googlePlaceSvc'];
 
-    function visitorCtrl($scope, $timeout, visitorSvc) {
+    function visitorCtrl($scope, $timeout, visitorSvc, googlePlaceSvc) {
 
         //rename $scope
         var vm = $scope;
-        //vm.postList = [];
+        vm.venues = [];
+        vm.searchResult = { state: null, searchPlace: null };
 
         //constuctor
         _init();
 
         function _init() {
             try {
-                //visitorSvc.getAllPost();
+                googlePlaceSvc.init();
             }
             catch (e) {
                 _displayError(e);
             }
+        }
+
+        //search by restaurant
+        vm.search = function () {
+            googlePlaceSvc.search(vm.searchResult.searchPlace).then(
+                function (res) { // success
+                    googlePlaceSvc.addMarker(res);
+                },
+                function (status) { // error
+                    _displayError(status);
+                }
+            );
         }
 
         //common method

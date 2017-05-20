@@ -22,6 +22,7 @@ define([
             , 'app/_common/directives/blogPageTitle'
             , 'app/_common/directives/hrefVoid'
             , 'app/_common/directives/blogInclude'
+            , 'app/_common/services/googlePlaceSvc'
 
             //Auth
             , 'app/auth/auth.config'
