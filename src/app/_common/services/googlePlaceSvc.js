@@ -18,6 +18,7 @@ define(['angular'], function (ng) {
         var service = {
             init: init,
             search: search,
+            getDetailsByRef: getDetailsByRef,
             createMarker: createMarker,
             latLng: { lat: 23.810332, lng: 90.41251809999994 },
             request: {
@@ -85,6 +86,28 @@ define(['angular'], function (ng) {
                     }
                     else d.reject(status);
                 });
+                return d.promise;
+            } catch (e) {
+                throw e;
+            }
+        }
+
+        //get details by getDetailsByRef
+        function getDetailsByRef(place) {
+            try {
+                var self = this;
+                var d = $q.defer();
+
+                var request = {
+                    placeid: place.placeid
+                };
+                self.places.getDetails(request, function (details, status) {
+                    if (status == 'OK') {
+                        d.resolve(details);
+                    }
+                    else d.reject(status);
+                });
+
                 return d.promise;
             } catch (e) {
                 throw e;

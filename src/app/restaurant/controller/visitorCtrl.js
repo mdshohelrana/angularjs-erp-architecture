@@ -10,14 +10,16 @@ define(['angular'], function (ng) {
     var controllerId = 'visitorCtrl';
     module.controller(controllerId, visitorCtrl);
 
-    visitorCtrl.$inject = ['$scope', '$timeout', 'visitorSvc', 'googlePlaceSvc'];
+    visitorCtrl.$inject = ['$scope', '$timeout', '$state', 'visitorSvc', 'googlePlaceSvc'];
 
-    function visitorCtrl($scope, $timeout, visitorSvc, googlePlaceSvc) {
+    function visitorCtrl($scope, $timeout, $state, visitorSvc, googlePlaceSvc) {
 
         //rename $scope
         var vm = $scope;
         vm.venues = [];
         vm.searchResult = { state: null, searchPlace: null };
+        vm.search = search;
+        vm.getDetailsByRefId = getDetailsByRefId;
 
         //constuctor
         _init();
@@ -45,12 +47,26 @@ define(['angular'], function (ng) {
         }
 
         //search by restaurant
-        vm.search = function () {
+        function search() {
             googlePlaceSvc.search(vm.searchResult.searchPlace).then(function (res) { // success
                 googlePlaceSvc.createMarker(res);
             }, function (status) { // error
                 _displayError(status);
             });
+        }
+
+        //get details by reference id
+        function getDetailsByRefId(place) {
+            try {
+                //$state.go('restaurant.details');
+                googlePlaceSvc.getDetailsByRef(place).then(function (details) {
+                    var kk = details;
+                }).catch(function (ex) {
+                    _displayError(e);
+                });;
+            } catch (e) {
+                _displayError(e);
+            }
         }
 
         function parseVenu(data) {
@@ -95,6 +111,7 @@ define(['angular'], function (ng) {
                 this.place = defaultData.vicinity || null;
                 this.category = defaultData.category || null;
                 this.rating = defaultData.rating || null;
+                this.placeid = defaultData.place_id || null;
 
             } catch (e) {
                 _displayError(e);
