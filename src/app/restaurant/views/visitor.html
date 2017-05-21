@@ -30,7 +30,9 @@
                 <li class="list-group-item" data-ng-repeat="venue in venues">
                     <div class="row">
                         <div class="col-md-5">
-                            <img class="shop" width="100" data-ng-src="{{venue.picture_url}}" />
+                            <div>
+                                <img class="shop" width="100" data-ng-src="{{venue.picture_url}}" />
+                            </div>
                         </div>
                         <div class="col-md-5">
                             <div class="row">
@@ -69,7 +71,7 @@
                     </div>
                 </li>
             </ul>
-            <nav aria-label="...">
+            <nav class="text-center" aria-label="...">
                 <ul class="pagination pagination-lg">
                     <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
                     <li><a href="#">1</a></li>
