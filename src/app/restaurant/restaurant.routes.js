@@ -19,13 +19,26 @@ define(['angular'], function (ng) {
                         title: ''
                     }
                 })
-                .state('restaurant.visitor', {
-                    url: '/visitor',
-                    templateUrl: 'app/restaurant/views/visitor.html' + htmlVersion,
-                    controller: 'visitorCtrl',
-                    resolve: load(['app/restaurant/controller/visitorCtrl.js', 'app/restaurant/services/visitorSvc.js']),
+                .state('restaurant.view', {
+                    url: '/view',
+                    templateUrl: 'app/restaurant/views/view.html' + htmlVersion,
+                    controller: 'viewCtrl',
+                    resolve: load([
+                        'app/restaurant/controller/viewCtrl.js',
+                        'app/restaurant/services/viewSvc.js',
+                        'app/restaurant/models/view.js']),
                     data: {
-                        title: 'visitor'
+                        title: 'view'
+                    }
+                })
+                .state('restaurant.details', {
+                    url: '/details',
+                    templateUrl: 'app/restaurant/views/details.html' + htmlVersion,
+                    controller: 'detailsCtrl',
+                    resolve: load([
+                        'app/restaurant/controller/detailsCtrl.js']),
+                    data: {
+                        title: 'details'
                     }
                 });
 

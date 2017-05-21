@@ -99,7 +99,7 @@ define(['angular'], function (ng) {
                 var d = $q.defer();
 
                 var request = {
-                    placeid: place.placeid
+                    reference: place.reference
                 };
                 self.places.getDetails(request, function (details, status) {
                     if (status == 'OK') {
