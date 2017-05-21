@@ -22,7 +22,7 @@ npm start
 Open the command-line and navigate to the _build folder and Type ```build.bat``` and press Enter. 
 
 ## Demo
-[Demo](https://angularjsarchitecture.herokuapp.com)
+[Demo](https://foodmeandyou.herokuapp.com)
 
 ## Author
 **[MD. SHOHEL RANA](https://github.com/mdshohelrana/aboutme)**
