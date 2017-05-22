@@ -57,7 +57,8 @@ define(['angular'], function (ng) {
             try {
                 var tempData = {};
                 tempData.title = data.name;
-                tempData.picture_url = data.icon;
+                if (data.photos)
+                        tempData.picture_url = data.photos[data.photos.length - 1].getUrl({ 'maxWidth': 200, 'maxHeight': 200 });                
                 tempData.formatted_address = data.formatted_address;
                 tempData.opening_hours = data.opening_hours.weekday_text;
                 tempData.reviews = data.reviews;

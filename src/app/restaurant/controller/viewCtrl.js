@@ -74,7 +74,7 @@ define(['angular'], function (ng) {
                     var mapObj = data[i];
                     var obj = new venu(mapObj);
                     if (mapObj.photos)
-                        obj.picture_url = mapObj.photos[0].getUrl({ 'maxWidth': 100, 'maxHeight': 100 })
+                        obj.picture_url = mapObj.photos[0].getUrl({ 'maxWidth': 100, 'maxHeight': 100 });
 
                     obj.plus = [];
                     obj.minus = [];
