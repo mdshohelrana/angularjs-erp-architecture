@@ -23,16 +23,17 @@ define(['angular'], function (ng) {
             latLng: { lat: 23.810332, lng: 90.41251809999994 },
             request: {
                 radius: '500',
-                types: ['restaurant','food']
+                opennow: true,
+                minprice: 0,
+                maxprice: 4,
+                rankby: 'distance',
+                types: ['restaurant']
             },
             map: void (0),
             places: void (0),
             markers: void (0)
         };
         return service;
-        // opennow: true,
-        // minprice: 0,
-        // maxprice: 4,
 
         //init
         function init() {
