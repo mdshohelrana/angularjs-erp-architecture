@@ -10,7 +10,7 @@ function venu(defaultData) {
         this.place = defaultData.vicinity || null;
         this.category = defaultData.category || null;
         this.rating = defaultData.rating || null;
-        this.reference = defaultData.reference || null;
+        this.placeId = defaultData.place_id || null;
 
     } catch (e) {
         _displayError(e);
