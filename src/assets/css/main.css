@@ -158,10 +158,17 @@ footer {
     height: 100%;
 }
 
+.venu-detail {
+    float: left;
+    width: 90%;
+}
+
 .chevron-arrow {
     display: flex;
     height: 80px;
+    float: right;
     justify-content: center;
     align-items: center;
 }
+
 
