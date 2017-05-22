@@ -60,7 +60,7 @@ define(['angular'], function (ng) {
                 tempData.picture_url = data.icon;
                 tempData.formatted_address = data.formatted_address;
                 tempData.opening_hours = data.opening_hours.weekday_text;
-                empData.reviews = data.reviews;
+                tempData.reviews = data.reviews;
 
                 return tempData;
             } catch (e) {
