@@ -36,7 +36,13 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-6">Reviews:</div>
-                <div class="col-md-6">{{venue.reviews}}</div>
+                <div class="col-md-6">
+                    <div data-ng-repeat="review in venue.reviews">
+                        <div>Author: {{review.author_name}}</div>
+                        <em>{{review.text}}</em>
+                        <div>Rating: {{review.rating}} star(s)</div>`;
+                    </div>
+                </div>
             </div>
         </div>
     </div>
