@@ -22,19 +22,18 @@ define(['angular'], function (ng) {
             createMarker: createMarker,
             latLng: { lat: 23.810332, lng: 90.41251809999994 },
             request: {
-                radius: '500',              
+                radius: '1000',              
                 rankby: 'distance',
-                types: ['restaurant']
+                types: ['restaurant','food']
             },
             map: void (0),
             places: void (0),
             markers: void (0)
         };
         return service;
-
-                // opennow: true,
-                // minprice: 0,
-                // maxprice: 4,
+        // opennow: true,
+        // minprice: 0,
+        // maxprice: 4,
 
         //init
         function init() {
