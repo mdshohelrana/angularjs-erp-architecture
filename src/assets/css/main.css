@@ -171,4 +171,10 @@ footer {
     align-items: center;
 }
 
+.item-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
 
