@@ -152,3 +152,16 @@ footer {
     border-radius: 5px;
     border: 1px solid silver;
 }
+
+.shop {
+    width: 100%;
+    height: 100%;
+}
+
+.chevron-arrow {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+

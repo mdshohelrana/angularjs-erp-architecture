@@ -3,7 +3,8 @@
         <div class="col-md-12">
             <h3 class="search-heading clearfix">
                 <img class="pull-left" src="../assets/img/logo.jpg" />
-                <img class="pull-right hidden-sm hidden-xs" src="http://upload.wikimedia.org/wikipedia/commons/9/9a/Google_maps_logo.png" />
+                <img class="pull-right hidden-sm hidden-xs" src="http://upload.wikimedia.org/wikipedia/commons/9/9a/Google_maps_logo.png"
+                />
             </h3>
 
             <div ng-show="searchResult.state == 'noResult'" class="noResults">No results found</div>
@@ -29,7 +30,7 @@
                 <li class="list-group-item" data-ng-repeat="venue in venues" data-ng-click="getDetailsByRefId(venue)">
                     <div class="row">
                         <div class="col-md-5">
-                            <div style="width:100px;height:100px;">
+                            <div style="width: 80px;height: 80px;">
                                 <img class="shop" data-ng-src="{{venue.picture_url}}" />
                             </div>
                         </div>
@@ -64,7 +65,7 @@
                                 </div>-->
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 chevron-arrow">
                             <img class="chevron" src="assets/img/chevron.png" />
                         </div>
                     </div>
