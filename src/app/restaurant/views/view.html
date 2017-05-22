@@ -34,39 +34,28 @@
                                 <img class="shop" data-ng-src="{{venue.picture_url}}" />
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="row">
-                                <div class="col-md-12">
+                        <div class="col-md-7">
+                            <div class="same-line">
+                                <div class="venu-detail">
                                     <div class="shopTitle">{{venue.title}}</div>
-                                </div>
-                                <div class="col-md-12">
-                                    <span data-ng-repeat="el in venue.plus">
+                                    <div class="clearfix"></div>
+                                    <div class="venu-rating">
+                                        <span data-ng-repeat="el in venue.plus">
                                         <img src="assets/img/star_gold.png" height="15" alt="" />
-                                    </span>
-                                    <span ng-repeat="el in venue.minus">
+                                </span>
+                                        <span ng-repeat="el in venue.minus">
                                         <img src="assets/img/star_grey.png" height="15" alt="" />
-                                    </span>
-                                    <!--<span class="bg-info">
-                                        {{venue.reviews}}
-                                    </span>-->
-                                    <!--<span class="bg-info">
-                                        {{venue.price}}
-                                    </span>-->
-                                </div>
-                                <div class="col-md-12">
+                                </span>
+                                    </div>
+                                    <div class="clearfix"></div>
                                     <div class="bg-info">
                                         {{venue.place}}
                                     </div>
                                 </div>
-                                <!--<div class="col-md-12">
-                                    <div class="bg-info">
-                                        {{venue.category}}
-                                    </div>
-                                </div>-->
+                                <div class="chevron-arrow">
+                                    <img class="chevron" src="assets/img/chevron.png" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-2 chevron-arrow">
-                            <img class="chevron" src="assets/img/chevron.png" />
                         </div>
                     </div>
                 </li>
