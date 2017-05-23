@@ -1,5 +1,5 @@
 {
-  "name": "personal-blog-site",
+  "name": "angular-archiecture",
   "version": "1.0.0",
   "description": "A complete architecture of large scale applicaion and website blog",
   "main": "server.js",
@@ -13,13 +13,13 @@
     "body-parser": "1.17.1"
   },
   "devDependencies": {
+    "angular": "^1.6.4",
     "angular-mocks": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
     "jasmine-core": "^2.6.2",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
     "karma-jasmine": "^1.1.0",
-    "karma-requirejs": "^1.1.0",
-    "nodemon": "^1.11.0",
     "opn": "^4.0.2"
   }
 }

@@ -1,7 +1,7 @@
 // Karma configuration
-// Generated on Mon May 22 2017 22:25:00 GMT+0600 (Azores Standard Time)
+// Generated on Tue May 23 2017 21:22:31 GMT+0600 (Azores Standard Time)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -15,7 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-       './src/app/_common/services/googlePlaceSvc.spec.js'
+      './node_modules/angular/angular.js',                             // angular
+      './node_modules/angular-ui-router/release/angular-ui-router.js', // ui-router
+      './node_modules/angular-mocks/angular-mocks.js',                 // loads our modules for tests    
+      './src/assets/js/jsVariables.js',  
+      './src/app/_common/services/googlePlaceSvc.spec.js'
     ],
 
 
