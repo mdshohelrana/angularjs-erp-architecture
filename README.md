@@ -1,4 +1,4 @@
-# AngularJSArchitecture
+# Angularjs Architecture
 This is large scale application architecture of AngularJS
 
 ## Features
